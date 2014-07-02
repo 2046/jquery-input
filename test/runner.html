@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../src/onInput.js"></script>
+</head>
+<body>
+  <input type="text">
+  <button type="button" id="button1">插入input</button>
+  <button type="button" id="button2">插入textarea</button>
+  <p><input id="text" type="text"> <span id="textshow"></span></p>
+  <p><textarea id="textarea" ></textarea> <span id="textareashow"></span></p>
+  <p>
+  1.用户输入<br />
+  2.退格 (backspace)<br />
+  3.删除 (delete)<br />
+  4.剪切 (ctrl + x)<br />
+  5.粘贴 (ctrl + v)<br />
+  6.撤销 (ctrl + z)<br />
+  7.鼠标右键删除<br />
+  8.鼠标右键剪切<br />
+  9.鼠标右键粘贴<br />
+  10.鼠标右键撤销<br />
+  </p>
+  <script>
+    $('#text').input(function(){
+      $('#textshow').text(this.val().length);
+    });
+
+    $('#textarea').input(function(){
+      $('#textareashow').text(this.val().length);
+    });
+
+    $('#button1').click(function(){
+      $('#text').val('aaaaa');
+    });
+
+    $('#button2').click(function(){
+      $('#textarea').val('aaaaa');
+    });
+  </script>
+</body>
+</html>
