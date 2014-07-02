@@ -4,13 +4,15 @@ jquery-input
 ## 描述
 监控输入框变化的Jquery插件
 
+**在以IE(包括IE)为核心的浏览器中，在回调函数里使用DOM赋值操作，如`$(el).text('a')``$(el).val('a')`等等，会导致`Ctrl+Z`和鼠标右键撤销功能失效**
+
 ## 使用
-```javascript
+```html
 <script src="js/jquery-input.js"></script>
 ```
 
 ## 例子
-```javascript
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +22,12 @@ jquery-input
 </head>
 <body>
   <input id="text" type="text">
+  <input id="text2" type="text">
   <script>
     $('#text').input(function(){
       // balabala.....
-      // this is Jquery element
-      console.log(this.val());
+      console.log(this.val()); // this is Jquery element
+      $('text2').val('hello'); // 这句代码导致撤销功能在IE系浏览器里不工作
     });
   </script>
 </body>
