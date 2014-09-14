@@ -1,4 +1,4 @@
-jquery-input
+jquery.input.js
 ============
 
 ## 描述
@@ -8,7 +8,7 @@ jquery-input
 
 ## 使用
 ```html
-<script src="js/jquery-input.js"></script>
+<script src="js/jquery.input.js"></script>
 ```
 
 ## 例子
@@ -18,7 +18,7 @@ jquery-input
 <head>
   <meta charset="UTF-8">
   <script src="js/jquery.js"></script>
-  <script src="js/jquery-input.js"></script>
+  <script src="js/jquery.input.js"></script>
 </head>
 <body>
   <input id="text" type="text">
